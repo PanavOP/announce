@@ -11,7 +11,7 @@ client.remove_command("help")
 @client.event
 async def on_ready():
     activity = discord.Game(name="Life Vision Roleplay | https://discord.gg/ZYUydRdr7a", type=3)
-    await client.change_presence(status=discord.Status.idle, activity=activity)
+    await client.change_presence(status=discord.Status.online, activity=activity)
     print(client.user.name)
     print("Online")
     print("-------")
