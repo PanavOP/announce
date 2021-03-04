@@ -10,6 +10,8 @@ client.remove_command("help")
 
 @client.event
 async def on_ready():
+    activity = discord.Game(name="Life Vision Roleplay | https://discord.gg/ZYUydRdr7a", type=3)
+    await client.change_presence(status=discord.Status.idle, activity=activity)
     print(client.user.name)
     print("Online")
     print("-------")
@@ -23,11 +25,7 @@ async def lvrpembed(ctx,*,message,):
     embed = discord.Embed(description=message,colour=0xFF0909)
     await ctx.send(embed=embed)
 
-@client.command(pass_context=True)
-async def deletethis(ctx):
-    await Bot.say('Command received')
-    await Bot.delete_message(ctx.message)
-    await Bot.say('Message deleted')
+
 
 
 client.run("ODE1MTAyMjQ3MTMwMTAzODI4.YDnhHw.iFaucptuvPG1l5M7Idgqc_O4D14")
