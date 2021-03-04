@@ -17,7 +17,7 @@ async def on_ready():
     print("-------")
 
 @client.command(pass_context=True)
-async def lvrptext(ctx,message):
+async def lvrptext(ctx,*,message):
     await ctx.send(message)
 
 @client.command(pass_context=True)
