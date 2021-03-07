@@ -10,7 +10,7 @@ client.remove_command("help")
 
 @client.event
 async def on_ready():
-    activity = discord.Game(name="Life Vision RP India Whitelisted | https://discord.gg/ZYUydRdr7a", type=3)
+    activity = discord.Game(name="Life Vision RP India Whitelisted| 79 Players | https://discord.gg/ZYUydRdr7a", type=3)
     await client.change_presence(status=discord.Status.online, activity=activity)
     print(client.user.name)
     print("Online")
