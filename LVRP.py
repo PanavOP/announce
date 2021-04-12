@@ -13,35 +13,24 @@ client.remove_command("help")
 
 @client.event
 async def on_ready():
-    activity = discord.Game(name="Life Vision RP India Whitelisted| 79 Players | https://discord.gg/ZYUydRdr7a", type=3)
+    activity = discord.Game(name="OctUp Gaming", type=3)
     await client.change_presence(status=discord.Status.online, activity=activity)
     print(client.user.name)
     print("Online")
     print("-------")
 
 @client.command(pass_context=True)
-@has_permissions(manage_roles=True, kick_members=True)
-async def lvrptext(ctx,*,message):
+@has_permission(manage_roles=True, kick_members=True)
+async def text(ctx,*,message):
     await ctx.send(message)
 
 
 @client.command(pass_context=True)
 @has_permissions(manage_roles=True, kick_members=True)
-async def lvrpembed(ctx,*,message,):
+async def embed(ctx,*,message,):
     embed = discord.Embed(description=message,colour=0xFF0909)
     await ctx.send(embed=embed)
 
-@client.command(pass_context=True)
-@commands.has_role('LEO (LSPD) 👮')
-async def onduty(ctx,*,message,):
-    embed = discord.Embed(title=message,description="Officer Going 10-41",colour=0xFF0909)
-    await ctx.send(embed=embed)
-
-@client.command(pass_context=True)
-@commands.has_role('LEO (LSPD) 👮')
-async def offduty(ctx,*,message,):
-    embed = discord.Embed(title=message,description="Officer Going 10-42",colour=0xFF0909)
-    await ctx.send(embed=embed)
 
 
-client.run("ODE1MTAyMjQ3MTMwMTAzODI4.YDnhHw.iFaucptuvPG1l5M7Idgqc_O4D14")
+client.run("ODE0ODU5OTQ4Njg5MTk1MDE4.YDj_dw.6q9r7LXop5NEJaY2e8-7F6qfMaA")
