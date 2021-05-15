@@ -13,24 +13,28 @@ client.remove_command("help")
 
 @client.event
 async def on_ready():
-    activity = discord.Game(name="OctUp Gaming", type=3)
+    activity = discord.Game(name="Stand Off 2", type=1)
     await client.change_presence(status=discord.Status.online, activity=activity)
     print(client.user.name)
     print("Online")
     print("-------")
 
 @client.command(pass_context=True)
-@has_permission(manage_roles=True, kick_members=True)
+@has_permissions(manage_roles=True, ban_members=True)
 async def text(ctx,*,message):
+    await ctx.message.delete()
     await ctx.send(message)
 
 
 @client.command(pass_context=True)
-@has_permissions(manage_roles=True, kick_members=True)
+@has_permissions(manage_roles=True, ban_members=True)
 async def embed(ctx,*,message,):
     embed = discord.Embed(description=message,colour=0xFF0909)
+    await ctx.message.delete()
     await ctx.send(embed=embed)
 
 
 
-client.run("ODE0ODU5OTQ4Njg5MTk1MDE4.YDj_dw.6q9r7LXop5NEJaY2e8-7F6qfMaA")
+client.run("ODQyNzg1MDI0NTk1NTkxMTg5.YJ6WuA.Fp1RNAo4whCbhW7jVODUXp8g05I")
+
+
